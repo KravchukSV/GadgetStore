@@ -1,0 +1,130 @@
+
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    background-color: black;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section{
+    padding: 50px 0;
+
+}
+
+a {
+    color: dimgrey;
+}
+
+a:hover {
+    color: blanchedalmond;
+}
+
+/*Header*/
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: dimgrey;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar-nav .dropdown-menu{
+    right: 0;
+    left: auto;
+}
+
+.top-menu li a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 1px;
+    transition: all .3s;
+    transform: scale(0);
+}
+
+.top-menu li a:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: dimgrey;
+    height: 1px;
+    transition: all .3s;
+    transform: scale(1);
+}
+/*Header*/
+
+.zoom h5{
+    overflow: hidden;
+    text-overflow: ellipsis; /* Додає "..." як підказку, якщо текст не вміщується */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Кількість рядків, які будуть відображені */
+    -webkit-box-orient: vertical;
+    white-space: normal; /* Забезпечує обрізку тексту за потреби */
+}
+
+.zoom h6{
+    display: block;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: all .4s;
+}
+
+.zoom:hover h6{
+    display: block;
+    transform: scaleY(0);
+    opacity: 0;
+    height: 0;
+    transition: all .4s;
+}
+
+.zoom a{
+    display: block;
+
+    transform: scaleY(0);
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+.zoom:hover a{
+    display: block;
+
+    transform: scaleY(1);
+    opacity: 1;
+    height: auto;
+    padding: initial;
+    margin: initial;
+    border: initial;
+
+    transition: all .4s;
+  }
+
+.zoom:hover{
+    transform: scale(1.1); /* Збільшення на 10% при наведенні */
+    overflow: hidden; /* Забезпечення обрізки зайвого вмісту */
+    transition: transform .4s;
+    z-index: 1;
+}
+
+.zoom{
+    transform: scale(1);
+    transition: all .4s;
+}
+
+
+
+
